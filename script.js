@@ -231,3 +231,107 @@
 // console.log(d);
 
 // // 20, 50, undef
+
+
+//*************************************************************** */
+// **************** ARRAY METHODS************
+
+// 1. forEach -> traverse all elements in array
+// 2. Map -> returns an array
+// 3. filter -> returns an array based on given condition
+// 4. reduce -> returns previous value in (callback)
+
+// let arr = [2,3,4,3,2,12,3,5];
+
+// for(i=0; i<arr.length;i++){
+//     console.log(arr[i]);
+// }
+
+// forEach is a inbuilt method for Arrays and it requires a Callback function  & it doesnt return any value.
+ 
+// arr.forEach(func);
+// here func is callback
+// function func(v){
+//     console.log(v);
+// }
+
+// arr.forEach((v,i,list)=>{
+//     console.log(v);
+// });
+
+// Map -> same as forEach method but returns an array
+
+// let arr = [2,3,4,3,2,12,3,5];
+
+// let mapReturn = arr.map(func);
+
+// function func(v,i,list){
+//     console.log(v,"--->",i)
+//     return v+i;
+// }
+// console.log(mapReturn)
+
+// filter is same as map but it returns the values based on given condition .
+
+// let arr = [2,3,4,3,2,12,3,5];
+
+// let filterReturn = arr.filter(func);
+
+// function func(v,i,list){
+//     if(v%2 == 0){
+//         return v;
+//     }
+// }
+// console.log(filterReturn);
+
+// reduce returns a single value;
+
+// let arr = [2,3,4,3,2,12,3,5];
+
+// let sum = 0;
+// arr.forEach((v)=>{
+//     sum+= v;
+// })
+// console.log(sum);
+
+// let ans = arr.reduce(func)
+
+// function func(x,v,i,list){
+//     console.log("value updated",x)
+//     return x*v;
+// }
+
+// console.log("final value -> ",ans);
+
+
+// ********************************************************
+
+// THIS Keyword
+
+// variables created with let and const never goes to window object
+
+// let a;
+// console.log(a)
+// console.log(window)
+// function aaa(v){
+//     console.log(v);
+// }
+// let abj = {
+//     a : 1,
+//     b : 2
+// }
+// var a = 10;
+// console.log(this)
+
+let obj = {
+    a : 10,
+    b : 20,
+    func: ()=>{
+        console.log(this);
+        let func1 = ()=>{
+            console.log(this);
+        }
+        func1();
+    }
+}
+obj.func();
