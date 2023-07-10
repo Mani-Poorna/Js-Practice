@@ -323,15 +323,41 @@
 // var a = 10;
 // console.log(this)
 
-let obj = {
-    a : 10,
-    b : 20,
-    func: ()=>{
-        console.log(this);
-        let func1 = ()=>{
-            console.log(this);
-        }
-        func1();
-    }
-}
-obj.func();
+// let obj = {
+//     a : 10,
+//     b : 20,
+//     func: ()=>{
+//         console.log(this);
+//         let func1 = ()=>{
+//             console.log(this);
+//         }
+//         func1();
+//     }
+// }
+// obj.func();
+
+
+// ********************** STRINGS ********************
+// 1. strings are immutable
+
+// let str = "Mani Poorna";
+// let str1 = " Rao";
+// str[0] = "x";
+// console.log(str)
+// console.log(modified);
+
+// for(i=0;i<str.length;i++){
+    //     console.log(str[i]);
+    // }
+// console.log(str.slice(0));
+// console.log(str.substring(0));
+// console.log(str.subStr(0))
+// let modified = str.replace("Poorna", "Civil");
+// let ans = str.concat(str1);
+// let ans = str.padStart(14,"P");
+// let ans = str.padEnd(14,"P");
+// let str = "Mani Poorna";
+// console.log(str.charAt(5));
+// console.log(str.charCodeAt(5));
+
+
